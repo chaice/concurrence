@@ -1,5 +1,9 @@
 package org.ccit.com;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.concurrent.locks.LockSupport;
+
 public class ThreadLifecycle1 {
 
     /**
@@ -13,9 +17,12 @@ public class ThreadLifecycle1 {
      *
      * Java中线程的生命周期：NEW（初始化状态），RUNNABLE（可运行/运行状态），BLOCKED（阻塞状态），WAITING（无限时等待），TIME_WAITING（有限时等待），TERMINATED（终止状态）
      *   只要Java线程处于这三种状态之一，那么这个线程就永远没有CPU的使用权
+     *
+     * stop方法会真的杀死线程，不给线程喘息的机会，如果线程持有ReentrantLock锁被stop的线程并不会调用unlock()方法，那么其他线程就再也没有机会获得ReentrantLock锁，类似的方法还有suspend()，resume().
+     * interrupt()方法仅仅是通知线程，线程有机会执行后续操作，同时也可以无视这个通知。
      */
     public static void main(String[] args) {
-
+        LockSupport.park();
     }
 
 }
