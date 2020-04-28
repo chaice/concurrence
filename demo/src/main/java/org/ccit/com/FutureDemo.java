@@ -17,7 +17,7 @@ public class FutureDemo {
      * 3.<T> Future<T> submit(Callable<T> task) 提交Callable任务.call()是有返回值的,返回的Future对象通过调用其get()获取任务的执行结果
      */
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        boilingWaterTea();
+        checkIsAsync();
     }
 
     //利用FutureTask很容易获取子线程的执行结果
@@ -41,6 +41,60 @@ public class FutureDemo {
         System.out.println(ft1.get());
     }
 
+    static void checkIsAsync() {
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
+
+        Future<Integer> f1 = executorService.submit(() -> {
+            try {
+                TimeUnit.SECONDS.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return 1;
+        });
+
+        Future<Integer> f2 = executorService.submit(() -> {
+            try {
+                TimeUnit.SECONDS.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return 5;
+        });
+
+        Future<Integer> f3 = executorService.submit(() -> {
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return 10;
+        });
+
+        try {
+            System.out.println(f1.get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            System.out.println(f2.get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            System.out.println(f3.get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 //需要执行洗水壶,烧开水,泡茶
