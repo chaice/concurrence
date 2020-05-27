@@ -1,0 +1,115 @@
+[
+  {
+    "path": "",
+    "children": [
+      {
+        "path": "",
+        "children": [
+          {
+            "path": "",
+            "children": [],
+            "id": 111,
+            "title": "目录111",
+            "parentId": 11
+          },
+          {
+            "path": "",
+            "children": [],
+            "id": 112,
+            "title": "目录111",
+            "parentId": 11
+          }
+        ],
+        "id": 11,
+        "title": "目录11",
+        "parentId": 1
+      },
+      {
+        "path": "",
+        "children": [],
+        "id": 12,
+        "title": "目录12",
+        "parentId": 1
+      },
+      {
+        "path": "",
+        "children": [],
+        "id": 13,
+        "title": "目录13",
+        "parentId": 1
+      },
+      {
+        "path": "",
+        "children": [],
+        "id": 14,
+        "title": "目录14",
+        "parentId": 1
+      }
+    ],
+    "id": 1,
+    "title": "主目录1"
+  },
+  {
+    "path": "",
+    "children": [
+      {
+        "path": "",
+        "children": [],
+        "id": 21,
+        "title": "目录21",
+        "parentId": 2
+      },
+      {
+        "path": "",
+        "children": [],
+        "id": 22,
+        "title": "目录22",
+        "parentId": 2
+      },
+      {
+        "path": "",
+        "children": [],
+        "id": 23,
+        "title": "目录23",
+        "parentId": 2
+      }
+    ],
+    "id": 2,
+    "title": "主目录2"
+  },
+  {
+    "path": "",
+    "children": [
+      {
+        "path": "",
+        "children": [],
+        "id": 31,
+        "title": "目录31",
+        "parentId": 3
+      }
+    ],
+    "id": 3,
+    "title": "主目录3"
+  },
+  {
+    "path": "",
+    "children": [
+      {
+        "path": "",
+        "children": [],
+        "id": 41,
+        "title": "目录41",
+        "parentId": 4
+      },
+      {
+        "path": "",
+        "children": [],
+        "id": 42,
+        "title": "目录42",
+        "parentId": 4
+      }
+    ],
+    "id": 4,
+    "title": "主目录4"
+  }
+]
